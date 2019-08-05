@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Todo } from '../../interface/todo';
 
 @Component({
   selector: 'app-template-todo-form',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateTodoFormComponent implements OnInit {
 
-  constructor() { }
+    public todo$: Todo;
 
-  ngOnInit() {
-  }
+    constructor() { 
+      this.todo$ = {
+        id: undefined,
+        label: undefined,
+        status: false,
+        position: undefined
+      };
+    }
+
+    ngOnInit() {
+      
+    }
+
+    public createToDo(event?: any): void{
+      console.log(this.todo$);
+      this.todo$ = {
+        id: undefined,
+        label: undefined,
+        status: false,
+        position: undefined
+      };
+    }
 
 }

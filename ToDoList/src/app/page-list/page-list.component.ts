@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page-list.component.sass']
 })
 export class PageListComponent implements OnInit {
+  
+    public showOpenToDo: boolean
+    public showDoneToDo: boolean
 
-  constructor() { }
+    constructor() {
+        this.showOpenToDo = true
+        this.showDoneToDo = false
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
